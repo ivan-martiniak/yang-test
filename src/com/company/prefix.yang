@@ -1,0 +1,56 @@
+module openconfig-network-instance {
+
+  yang-version 1;
+  // namespace
+  namespace "http://openconfig.net/yang/network-instance";
+
+  prefix "oc-netinst";
+
+  // import some basic types
+  import ietf-yang-types { prefix "yang"; }
+  import ietf-inet-types { prefix "inet"; }
+  import openconfig-network-instance-types { prefix "oc-ni-types"; }
+  import openconfig-policy-types { prefix "oc-pol-types"; }
+  import openconfig-routing-policy { prefix "oc-rpol"; }
+  import openconfig-local-routing { prefix "oc-loc-rt"; }
+  import openconfig-interfaces { prefix "oc-if"; }
+  import openconfig-extensions { prefix "oc-ext"; }
+  import openconfig-network-instance-l3 { prefix "oc-ni-l3"; }
+  import openconfig-types { prefix "oc-types"; }
+  import openconfig-bgp { prefix "oc-bgp"; }
+  import openconfig-mpls { prefix "oc-mpls"; }
+  import openconfig-vlan { prefix "oc-vlan"; }
+  import openconfig-ospfv2 { prefix "oc-ospfv2"; }
+  import openconfig-policy-forwarding { prefix "oc-pf"; }
+  import openconfig-segment-routing { prefix "oc-sr"; }
+  import openconfig-isis { prefix "oc-isis"; }
+  import openconfig-aft { prefix "oc-aft"; }
+  import openconfig-pim { prefix "oc-pim"; }
+  import openconfig-igmp { prefix "oc-igmp"; }
+  import openconfig-evpn { prefix "oc-evpn"; }
+
+  // include submodules
+  include openconfig-network-instance-l2;
+
+  // meta
+  organization "OpenConfig working group";
+
+  contact
+    "OpenConfig working group
+    www.openconfig.net";
+
+  description
+    "An OpenConfig description of a network-instance. This may be
+    a Layer 3 forwarding construct such as a virtual routing and
+    forwarding (VRF) instance, or a Layer 2 instance such as a
+    virtual switch instance (VSI). Mixed Layer 2 and Layer 3
+    instances are also supported.";
+
+  //oc-ext:openconfig-version "0.15.0";
+
+//  revision "2021-01-25" {
+//    description
+//      "Add support for evpn";
+//    reference "0.15.0";
+//  }
+}

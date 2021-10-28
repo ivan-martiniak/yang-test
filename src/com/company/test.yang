@@ -1,0 +1,19 @@
+module acme-foo {
+     namespace "http://acme.example.com/foo";
+     prefix "acfoo";
+
+     
+     list interface {
+         key "name";
+         leaf name {
+         type uint16;
+             type string;
+         }
+         
+
+         leaf mtu {
+             type int8;
+             description "The MTU of the interface.";
+         }
+     }
+ }

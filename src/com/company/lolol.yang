@@ -1,0 +1,7 @@
+module fdfd {
+    namespace "http://openconfig.net/yang/network-instance";
+
+    prefix "oc-netinst";
+
+
+}
